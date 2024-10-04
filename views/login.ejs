@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="author" content="Webpixels" />
+  <title>LearnNet - Login</title>
+  <!-- Favicon -->
+  <link rel="icon" href="../cstm-assets/logo.svg" type="image/png" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(90deg, #cccccc, #434343, #303030);
+      height: 100vh;
+      margin: 0;
+      overflow: hidden; /* Prevent horizontal scroll on smaller screens */
+      position: relative; /* Establish stacking context */
+    }
+
+    .login-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 40%; /* Adjust as needed */
+      height: 50%;
+      max-width: 400px; /* Limit width for smaller screens */
+      background-color: #ffffff;
+      padding: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      z-index: 1; /* Ensure login container appears above background image */
+    }
+
+    .login-container h1 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #333333;
+    }
+
+    .login-container p {
+      margin-bottom: 30px;
+      color: #666666;
+    }
+
+    .login-container img.logo {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    .btn-google {
+      display: inline-block;
+      background-color: #8c52ff;
+      color: #ffffff;
+      border: none;
+      padding: 10px 50px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .btn-google:hover {
+      background-color: #673ab7;
+    }
+    /* Background image styling */
+    .background-image {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      width: 50%;
+      object-fit: cover;
+      display: block;
+      z-index: 0; /* Ensure background image stays behind login container */
+    }
+
+    /* Media query for smaller screens */
+    @media (max-width: 768px) {
+      .login-container {
+        width: 90%; /* Adjust width for smaller screens */
+      }
+      .background-image {
+        display: none;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="login-container">
+    <img src="/cstm-assets/logo.svg" alt="Logo" class="logo">
+    <h1>LearnNet</h1>
+    <p>Login to Your Account</p>
+    <a href="/auth/google" class="btn-google">Sign in with Google</a>
+  </div>
+  <img src="../ikka/images/background.jpg" alt="Background Image" class="background-image">
+</body>
+
+</html>
